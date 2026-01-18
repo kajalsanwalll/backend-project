@@ -1,0 +1,20 @@
+{
+  "name": "complete-backend-project",
+  "version": "1.0.0",
+  "description": "A project management application (beginner level)",
+  "keywords": [
+    "backend",
+    "API",
+    "Creation"
+  ],
+  "license": "ISC",
+  "author": "Kajal Sanwal",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node index.js"
+  },
+  "devDependencies": {
+    "prettier": "3.8.0"
+  }
+}
