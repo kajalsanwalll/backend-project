@@ -82,6 +82,7 @@ Auth Routes
 Method	Endpoint	Description
 POST	/api/auth/register	Register a new user
 POST	/api/auth/login	Login user
+
 ❗ Error Handling
 
 All errors are returned in a consistent JSON format
@@ -102,7 +103,7 @@ Role‑based access control
 
 Rate limiting & logging
 
- Status
+* Status
 
 ✅ Phase 1 completed
 
