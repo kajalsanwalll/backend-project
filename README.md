@@ -66,6 +66,7 @@ PORT=5000
 MONGODB_URI=your_mongodb_connection_string
 JWT_SECRET=your_jwt_secret
 JWT_EXPIRY=7d
+
 ▶️ Getting Started
 1. Clone the repo
 git clone https://github.com/your-username/your-repo-name.git
