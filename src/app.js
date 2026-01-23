@@ -31,11 +31,11 @@ app.use(cors({
 // importing the routes 
 import healthcheckRouter from "./routes/healthcheck.routes.js";
 import authRouter from "./routes/auth.routes.js";
+import projectRouter from "./routes/project.routes.js";
 
 app.use("/api/v1/healthcheck", healthcheckRouter);
-
 app.use("/api/v1/auth", authRouter);
-
+app.use("/api/v1/projects", projectRouter);
 
 
 app.get("/",(req,res)=> {
