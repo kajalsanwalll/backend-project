@@ -133,5 +133,7 @@ Phase 2:  (RBAC, projects, tasks, subtasks, notes, file uploads) implemented in 
 * Author
 
 Kajal Sanwal
+
 Built with focus, persistence, and a lot of debugging.
+
 (Thank you if you made it till here)
