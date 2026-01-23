@@ -69,8 +69,8 @@ JWT_EXPIRY=7d
 
 ▶️ Getting Started
 1. Clone the repo
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
+git clone https://github.com/kajalsanwalll/backend-project.git
+cd backend-project
 2. Install dependencies
 npm install
 3. Run the server
