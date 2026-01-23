@@ -9,6 +9,68 @@ import { UserRolesEnum } from "../utils/constants.js";
 
 const getProjects = asyncHandler(async(req, res) => {
 
+    // using mongodb aggregation pipelines 
+   const projects = await ProjectMember.aggregate([
+    {
+        $match: {
+            user: new mongoose.Types.ObjectId(req.user._id)
+        }
+    },
+    {
+        $lookup: {
+            from: "projects",
+            localField: "projects",
+            foreignField: "_id",
+            as: "projects",
+            pipeline: [
+                {
+                    $lookup: {
+                        from: "projectmembers",
+                        localField: "_id",
+                        foreignField: "projects",
+                        as: "projectmembers"
+                    }
+                },
+                {
+                    $addFields: {
+                        members: {
+                            $size: "$projectmembers"
+                        }
+                    }
+                }
+            ]
+        }
+
+    },
+    {
+        $unwind: "$project"  // ripping apart the "project" 
+    },
+    {
+        $project: {   // projecting the grabbed items on frontend! using "$project"
+            project: {
+                _id: 1,
+                description:1,
+                name: 1,
+                members: 1,
+                createdAt: 1,
+                createdBy: 1
+            },
+            role: 1,
+            _id: 0
+        }
+    }
+])
+
+return res
+ .status(201)
+ .json(
+    new ApiResponse(
+        201,
+        projects,
+        "Projects fetched successfully!"
+    )
+ )
+
 })
 
 const getProjectById = asyncHandler(async(req, res) => {
