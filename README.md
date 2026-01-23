@@ -1,24 +1,27 @@
-Backend Authentication API 
+Backend Authentication API
 
-A production‑ready backend API for user authentication and account management, built with Node.js, Express, and MongoDB. This project follows clean architecture principles and was developed according to the PRD file shared.
+A production-ready authentication and account management API built with Node.js, Express, and MongoDB.
+Designed following clean architecture principles and implemented strictly according to the Product Requirements Document (PRD).
 
-* Features
+This project focuses on security, scalability, and maintainability, serving as the foundation for a larger role-based collaborative backend system.
+
+*Features
 
 User Registration & Login
 
-Secure Password Hashing (bcrypt)
+Secure Password Hashing using bcrypt
 
-JWT‑based Authentication
+JWT-based Authentication
 
-Input Validation (express‑validator)
+Input Validation with express-validator
 
 Centralized Error Handling
 
-Modular MVC‑style Architecture
+Modular MVC-style Architecture
 
-Environment‑based Configuration
+Environment-based Configuration
 
-GitHub‑ready, scalable codebase
+Scalable, GitHub-ready codebase
 
 * Tech Stack
 
@@ -28,15 +31,15 @@ Framework: Express.js
 
 Database: MongoDB + Mongoose
 
-Auth: JWT (JSON Web Tokens)
+Authentication: JSON Web Tokens (JWT)
 
 Security: bcrypt
 
-Validation: express‑validator
+Validation: express-validator
 
 Dev Tools: nodemon, dotenv
 
-📁 Project Structure
+* Project Structure
 src/
 │── controllers/        # Business logic
 │── routes/             # API route definitions
@@ -46,17 +49,18 @@ src/
 │── app.js              # Express app setup
 │── index.js            # Server entry point
 
+
 * Authentication Flow
 
-User registers with email/username & password
+User registers using email/username and password
 
-Password is hashed before saving to DB
+Password is hashed before storing in the database
 
-On login, credentials are verified
+User logs in with valid credentials
 
-JWT is generated and returned
+JWT access token is generated and returned
 
-Protected routes validate JWT via middleware
+Protected routes validate JWT using authentication middleware
 
 * Environment Variables
 
@@ -67,47 +71,50 @@ MONGODB_URI=your_mongodb_connection_string
 JWT_SECRET=your_jwt_secret
 JWT_EXPIRY=7d
 
+
 ▶️ Getting Started
-1. Clone the repo
+1 Clone the repository
 git clone https://github.com/kajalsanwalll/backend-project.git
 cd backend-project
-2. Install dependencies
+
+2 Install dependencies
 npm install
-3. Run the server
+
+3 Run the development server
 npm run dev
 
-Server will start at: http://localhost:5000
+
+Server will start at:
+* http://localhost:5000
 
 * API Endpoints (Phase 1)
-Auth Routes
+Authentication Routes
 Method	Endpoint	Description
 POST	/api/auth/register	Register a new user
-POST	/api/auth/login	Login user
+POST	/api/auth/login	Authenticate a user
+
 
 ❗ Error Handling
 
-All errors are returned in a consistent JSON format
+Consistent JSON error responses across the API
 
-Custom ApiError class is used
+Centralized error handling middleware
 
-Validation errors are aggregated and returned cleanly
+Custom ApiError class for structured errors
 
-* Future Enhancements (Phase 2+)
+Validation errors are aggregated and returned clearly
 
-Email verification
+ Future Enhancements (Phase 2+)
 
-Forgot / Reset password
+Integration with Frontend
 
-Refresh tokens
+* Project Status
 
-Role‑based access control
-
-Rate limiting & logging
-
-* Status
-
-✅ Phase 1 completed
+Phase 1 Completed
+Phase 2 (RBAC, projects, tasks, subtasks, notes, file uploads) implemented in the extended backend system.
 
 * Author
 
-Built with focus and bugs (quiet a lot) by Kajal Sanwal 
+Kajal Sanwal
+Built with focus, persistence, and a lot of debugging.
+(Thank you if you made it till here)
