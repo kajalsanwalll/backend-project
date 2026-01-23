@@ -5,7 +5,7 @@ Designed following clean architecture principles and implemented strictly accord
 
 This project focuses on security, scalability, and maintainability, serving as the foundation for a larger role-based collaborative backend system.
 
-*Features
+* Features
 
 User Registration & Login
 
