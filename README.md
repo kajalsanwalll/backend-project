@@ -40,13 +40,20 @@ Validation: express-validator
 Dev Tools: nodemon, dotenv
 
 * Project Structure
+
 src/
 │── controllers/        # Business logic
+
 │── routes/             # API route definitions
+
 │── models/             # Mongoose schemas
+
 │── middlewares/        # Auth, validation, error handlers
+
 │── utils/              # Helper utilities (ApiError, ApiResponse, etc.)
+
 │── app.js              # Express app setup
+
 │── index.js            # Server entry point
 
 
@@ -67,31 +74,40 @@ Protected routes validate JWT using authentication middleware
 Create a .env file in the root directory:
 
 PORT=5000
+
 MONGODB_URI=your_mongodb_connection_string
+
 JWT_SECRET=your_jwt_secret
+
 JWT_EXPIRY=7d
 
 
-▶️ Getting Started
-1 Clone the repository
+▶️ Getting Started 
+
+1 Clone the repository: 
 git clone https://github.com/kajalsanwalll/backend-project.git
+
 cd backend-project
 
-2 Install dependencies
+2 Install dependencies: 
 npm install
 
-3 Run the development server
+3 Run the development server: 
 npm run dev
 
 
-Server will start at:
-* http://localhost:5000
+* Server will start at:
+ http://localhost:5000
 
 * API Endpoints (Phase 1)
+
 Authentication Routes
-Method	Endpoint	Description
-POST	/api/auth/register	Register a new user
-POST	/api/auth/login	Authenticate a user
+
+Method      	 Endpoint	          Description
+
+POST	    /api/auth/register	  Register a new user
+
+POST    	/api/auth/login	          Authenticate a user
 
 
 ❗ Error Handling
@@ -104,14 +120,15 @@ Custom ApiError class for structured errors
 
 Validation errors are aggregated and returned clearly
 
- Future Enhancements (Phase 2+)
+* Future Enhancements (Phase 2+)
 
 Integration with Frontend
 
 * Project Status
 
-Phase 1 Completed
-Phase 2 (RBAC, projects, tasks, subtasks, notes, file uploads) implemented in the extended backend system.
+Phase 1:  Completed
+
+Phase 2:  (RBAC, projects, tasks, subtasks, notes, file uploads) implemented in the extended backend system.
 
 * Author
 
