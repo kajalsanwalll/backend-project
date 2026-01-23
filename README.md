@@ -103,11 +103,11 @@ npm run dev
 
 Authentication Routes
 
-Method      	 Endpoint	          Description
+=> Method: Endpoint: Description
 
-POST	    /api/auth/register	  Register a new user
+POST /api/auth/register => Register a new user
 
-POST    	/api/auth/login	          Authenticate a user
+POST /api/auth/login => Authenticate a user
 
 
 ❗ Error Handling
