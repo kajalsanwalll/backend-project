@@ -36,7 +36,7 @@ export const verifyJWT = asyncHandler(async(req, res, next) => {
 
 // checking for the permissions needed to do some task (who can do what)
 export const validateProjectPermission = (roles = []) => {
-    asyncHandler(async (req, res, next) => {
+    return asyncHandler(async (req, res, next) => {
         const {projectId} = req.params
 
         if(!projectId){
